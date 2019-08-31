@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col">
+  <button href="#" (click)="loadViewAll()" class="btn btn-primary btn-lg">View All</button>
+  </div>
+  <div class="col">
+    <button href="#" (click)="loadCreateWorkout()" class="btn btn-primary btn-lg"> Create</button>
+  </div>
+  <div class="col">
+    <button href="#" (click)="loadCategory()" class="btn btn-primary btn-lg"> Category</button>
+  </div>
+  <div class="col">
+    <button href="#" (click)="loadTrack()" class="btn btn-primary btn-lg"> Track </button>
+  </div>
+
+</div>
+<div *ngIf="create" style="padding-top: 5%">
+  <app-addworkout (categoryNew)="loadCategory()"></app-addworkout>
+</div>
+<div *ngIf="category" style="padding-top: 5%">
+  <app-category></app-category>
+</div>
+<div *ngIf="track" style="padding-top: 5%">
+  <app-track></app-track>
+</div>
+
+<div *ngIf="viewAll" style="padding-top: 5%">
+  <div> In View Component </div>
+  <div> In View Component </div>
+</div>
